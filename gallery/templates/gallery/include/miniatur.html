@@ -1,0 +1,34 @@
+{% load static %}
+<div class="col-12"  style="background-color: #3C3C3C;">
+    <div class="row ">
+        <h3 class="text-center bold-text" style="color: white;">Фотографии</h3>
+        <div class=" d-flex flex-column align-items-center">
+            
+            <!-- Слайдер для выбранного изображения -->
+            <div class="slider">
+                {% for image in images %}
+                    <div class="slider-image-container">
+                        <img src="{{ image.image.url }}" alt="{{ image.title }}" class="slider-image img-fluid rounded-corners" onclick="openFullscreen('{{ image.image.url }}')">
+                    </div>
+                {% endfor %}
+            </div>
+
+            <!-- Миниатюры изображений -->
+            <div class="thumbnail-slider mt-3 d-flex align-items-center justify-content-between">
+                <button type="button" class="btn btn-custom slick-prev"> 
+                    <img class="navbar-brand" src="{% static '/img/icon/prew.png' %}">
+                </button>
+            
+                {% for image in images %}
+                    <div class="thumbnail">
+                        <img src="{{ image.image.url }}" alt="{{ image.title }}" class="rounded-corners" onclick="changeSliderImage('{{ image.image.url }}')">
+                    </div>
+                {% endfor %}
+            
+                <button type="button" class="btn btn-custom slick-next">
+                    <img class="navbar-brand" src="{% static '/img/icon/next.png' %}">
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

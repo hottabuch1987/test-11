@@ -1,0 +1,90 @@
+
+    .slider {
+        width: 100%;
+        margin: auto;
+        overflow: hidden;
+    }
+    .slider-image {
+        width: 60%;
+        height: auto;
+        display: block;
+        margin: auto;
+    }
+    .slider-image-container {
+        position: relative;
+    }
+    .thumbnail-slider {
+        display: flex;
+        justify-content: center;
+        overflow-x: auto;
+        margin-top: 10px;
+    }
+    .thumbnail {
+        margin: 0 5px;
+        cursor: pointer;
+   
+    }
+    .thumbnail img {
+        width: 100px;
+        height: auto;
+        border: 2px solid #ddd;
+        transition: border 0.3s;
+    }
+    .thumbnail img:hover {
+        border: 2px solid #fff;
+    }
+
+    .btn-custom {
+        transition: background-color 0.3s; /* Плавный переход цвета */
+    }
+
+    /* Стиль для кнопок Slick */
+    .slick-prev, .slick-next {
+        font-size: 30px; /* Размер шрифта кнопок */
+        color: #191414; /* Цвет иконок */
+        z-index: 1000; /* Поверх остальных элементов */
+    }
+
+    .thumbnail-slider {
+        display: flex;
+        align-items: center; /* Центрирование по вертикали */
+        justify-content: center; /* Центрирование по горизонтали */
+        margin-top: 10px;
+        padding: 0 10px; /* Отступы для контейнера */
+    }
+
+    .thumbnail {
+        margin: 0 5px; /* Отступы между миниатюрами */
+    }
+
+    .thumbnail img {
+        width: 100px; /* Ширина миниатюры */
+        height: auto; /* Высота автоматически */
+        border: 2px solid #ddd; /* Граница */
+        transition: border 0.3s; /* Плавный переход при наведении */
+    }
+
+    .thumbnail img:hover {
+        border: 2px solid #fff; /* Цвет границы при наведении */
+    }
+
+
+    .btn-custom {
+        font-size: 20px; /* Размер шрифта */
+        color: #191414; /* Цвет кнопок */
+        border: none; /* Убрать границу */
+        padding: 10px; /* Поля */
+        cursor: pointer; /* Указатель курсора */
+        transition: background-color 0.3s; /* Плавный переход */
+    }
+
+    .btn-custom:hover {
+        background-color: #6e7175; /* Цвет фона при наведении */
+    }
+
+    .rounded-corners {
+        border-radius: 15px;
+        overflow: hidden; 
+        background-color: #444444;
+        opacity: 0.8;
+    }

@@ -1,0 +1,29 @@
+
+{% load static %}
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <img class="navbar-brand" src="{% static '/img/icon/logo.png' %}" alt="Логотип">
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="mx-auto">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item {% if active_nav == '/' %}active{% endif %}">
+                        <a href="{% url 'slider_view' %}" class="nav-link">Преимущества</a>
+                    </li>
+                    <li class="nav-item {% if active_nav == '/' %}active{% endif %}">
+                        <a href="{% url 'slider_view' %}" class="nav-link">Фотографии</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="d-flex">
+            <button class="btn btn-danger" type="button">Вход</button>
+        </div>
+    </div>
+</nav>

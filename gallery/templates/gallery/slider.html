@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<div class="container my-4">
+    <div class="row justify-content-center">
+        <div class="col-8 my-4">
+            <h1 class="text-center my-4 bold-text">Космическое агентство</h1>
+            <h3 class="text-center text-muted fs-6">
+                <span>Национальное управление по аэронавтике и исследованию космического </span>
+                <span>пространства — ведомство, относящееся к федеральному правительству США и подчиняющееся непосредственно президенту США.</span>
+            </h3>
+        </div>
+
+        <!-- Новый блок по центру -->
+        <div class="container">
+            <div class="row my-4">
+                <div class="col-12 col-md-6 d-flex flex-wrap my-4">
+                    <div class="text-center col-6">
+                        <img class="navbar-brand" src="{% static '/img/icon/fa6-solid_shuttle-space.png' %}" alt="Иконка 1">
+                        <p>Спейс шаттлы —</p>
+                        <p> пилотируемые корабли</p>
+                    </div>
+                    <div class="text-center col-6">
+                        <img class="navbar-brand" src="{% static '/img/icon/ion_telescope.png' %}" alt="Иконка 2">
+                        <p>Лучшее телескопическое </p>
+                        <p>оборудование</p>
+                    </div>
+                    <div class="text-center col-6">
+                        <img class="navbar-brand" src="{% static '/img/icon/bi_moon-stars-fill.png' %}" alt="Иконка 3">
+                        <p>Целимся на Луну </p>
+                        <p>и Марс</p>
+                    </div>
+                    <div class="text-center col-6">
+                        <img class="navbar-brand" src="{% static '/img/icon/bxs_medal.png' %}" alt="Иконка 4">
+                        <p>Золотая медаль </p>
+                        <p>по научным исследованиям </p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 d-flex align-items-center justify-content-center">
+                    <img class="img-fluid" src="{% static '/img/foto.png' %}" alt="Фото">
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+{% include 'gallery/include/miniatur.html' %}
+{% endblock content %}
